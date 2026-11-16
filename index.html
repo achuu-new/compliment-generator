@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pink Paradise
+        </title>
+        <style>
+
+body {
+    background-color: #fff0f6;
+    font-family: Arial;
+    text-align: center;
+    padding: 80px;
+}
+
+h1 {
+    color: #d63384;
+}
+
+p {
+    color: #8a4162;
+    font-size: 18px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+</style>
+    </head>
+    <body>
+        <h1>Welcome to Ancilin's Pink Paradise!
+        </h1>
+        <p>A little corner of happiness, beauty and fun!</p>
+        <button onclick="alert('HEYYY How are you...ITZ Ancilin Johnson Here!!! 💗')">
+    Click Me! 💗
+</button><h2>Daily Compliment 💗</h2>
+
+<p id="compliment">Click the button for a surprise!</p>
+
+<button onclick="giveCompliment()">
+    Give me a compliment 🎀
+</button>
+<h2>Spread Some Love 💗</h2>
+
+<p id="heartCount">❤️ 0</p>
+
+<button onclick="addHeart()">
+    Send a Heart 💕
+</button>
+<script>
+function giveCompliment() {
+
+    let compliments = [
+        "You are beautiful! 🌸",
+        "You are amazing! 💗",
+        "Keep shining! ✨",
+        "You are special! 🎀",
+        "You deserve happiness! 🌷"
+    ];
+
+    let randomNumber = Math.floor(Math.random() * compliments.length);
+
+    document.getElementById("compliment").innerHTML = compliments[randomNumber];
+
+}
+let hearts = 0;
+
+function addHeart() {
+
+    hearts = hearts + 1;
+
+    document.getElementById("heartCount").innerHTML = "❤️ " + hearts;
+
+}
+function showSurprise() {
+
+    document.getElementById("surprise").innerHTML =
+    "✨ Lots of Love.....ANCILIN JOHNSON! 💗";
+
+}
+</script>
+<h2>A Little Surprise 🎀</h2>
+
+<button onclick="showSurprise()">
+    Open My Surprise 💗
+</button>
+
+<p id="surprise"></p>
+    </body>    
+</html>
